@@ -17,18 +17,34 @@
         ></com.google.android.material.appbar.AppBarLayout>
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/rectangle_1_cap"
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
-        ></ImageView>
+        android:src="@drawable/rectangle_1_cap"></ImageView>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
         android:layout_gravity="center_horizontal"
         android:text="@string/UserName"
-        ></EditText>
+        android:textSize="30dp"
+        app:layout_anchor="@+id/imageView"
+        app:layout_anchorGravity="bottom"></EditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDicFrAlph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/group_1mainbutton"
+        app:layout_anchor="@+id/imageView"
+        app:layout_anchorGravity="bottom"
+        android:layout_margin="50dp"
+        android:layout_marginTop="">
+
+    </androidx.appcompat.widget.AppCompatButton>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
