@@ -33,6 +33,11 @@
         app:layout_anchor="@+id/imageView"
         app:layout_anchorGravity="bottom"></EditText>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnDicFrAlph"
         android:layout_width="match_parent"
@@ -40,11 +45,13 @@
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
         android:src="@drawable/group_1mainbutton"
-        app:layout_anchor="@+id/imageView"
         app:layout_anchorGravity="bottom"
+        android:layout_gravity="center|bottom"
         android:layout_margin="50dp"
-        android:layout_marginTop="">
+        android:layout_marginTop="10dp">
 
     </androidx.appcompat.widget.AppCompatButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
