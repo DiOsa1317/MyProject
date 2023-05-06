@@ -18,7 +18,7 @@ public class IdiDicByAlph extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_idi_dic_by_alph, container, false);
+        View view = inflater.inflate(R.layout.fragment_registration, container, false);
         return view;
     }
 }
