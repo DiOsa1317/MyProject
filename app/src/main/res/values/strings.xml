@@ -17,6 +17,7 @@
     <string name="Into"> Войти </string>
     <string name="Forgot_password"> Забыли пароль? </string>
     <string name="Go_into"><b> Вход </b> </string>
+    <string name="Registration"><b> Регистрация </b> </string>
 
     <string name="DicAlphFrasHead"> <b> Словарь фразелогизмов по алфавиту </b></string>
     <string name="DicThemeFrasHead"> <b> Словарь фразелогизмов по темам  </b></string>
@@ -24,6 +25,7 @@
     <string name="PraDrHead"> <b> Практика по древнерусским словам </b> </string>
     <string name="DicThemeDrHead"> <b> Словарь древнерусских слов по темам </b> </string>
     <string name="DicAlphDrHead"><b>Словарь древнерусских по алфавиту </b> </string>
+    <string name="Element"> Элемент </string>
 
     <string name="Test1"><b>Тест №1 </b></string>
     <string name="Answer1"> Ответ №1 </string>

@@ -17,8 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHeight_percent="0.34"
         android:background="@drawable/rectangle_1_cap"
-        >
-    </View>
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topGuideline"
@@ -27,7 +26,7 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="@+id/main_rectangle"
         app:layout_constraintGuide_percent="0.03"
-        ></androidx.constraintlayout.widget.Guideline>
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/leftGuideline"
@@ -36,7 +35,7 @@
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintGuide_percent="0.03"
-        ></androidx.constraintlayout.widget.Guideline>
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/rightGuideline"
@@ -45,7 +44,7 @@
         android:orientation="vertical"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintGuide_percent="0.97"
-        ></androidx.constraintlayout.widget.Guideline>
+        />
 
 
     <ImageView
@@ -59,8 +58,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHeight_percent="0.10"
         app:layout_constraintDimensionRatio="1:1"
-
-        ></ImageView>
+        />
 
 
 
@@ -76,7 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.10"
         app:layout_constraintStart_toStartOf="parent"
-        ></TextView>
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glBetweenRecandBtn1"
@@ -85,7 +83,7 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintGuide_percent="0.38"
-        ></androidx.constraintlayout.widget.Guideline>
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/slAlphFras"
@@ -99,8 +97,8 @@
         app:layout_constraintHeight_percent="0.07"
         app:layout_constraintDimensionRatio="7.3:1"
         android:text="@string/DicAlphFras"
-        android:textSize="16dp"
-        ></androidx.appcompat.widget.AppCompatButton>
+        android:textSize="16sp"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glBetweenBtn1andBt2"
@@ -109,7 +107,7 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintGuide_percent="0.48"
-        ></androidx.constraintlayout.widget.Guideline>
+        />
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -124,8 +122,8 @@
         app:layout_constraintDimensionRatio="7.3:1"
         android:background="@drawable/back_for_btn"
         android:text="@string/DicThemeFras"
-        android:textSize="16dp"
-        ></androidx.appcompat.widget.AppCompatButton>
+        android:textSize="16sp"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glBetweenBtn2andBt3"
@@ -134,7 +132,7 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintGuide_percent="0.58"
-        ></androidx.constraintlayout.widget.Guideline>
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/PractiseFras"
@@ -148,8 +146,8 @@
         app:layout_constraintDimensionRatio="7.3:1"
         android:background="@drawable/back_for_practise_btn"
         android:text="@string/PracFras"
-        android:textSize="16dp"
-        ></androidx.appcompat.widget.AppCompatButton>
+        android:textSize="16sp"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glBetweenBtn3andBt4"
@@ -158,7 +156,7 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintGuide_percent="0.68"
-        ></androidx.constraintlayout.widget.Guideline>
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/PractiseDr"
@@ -172,8 +170,8 @@
         app:layout_constraintDimensionRatio="7.3:1"
         android:background="@drawable/back_for_practise_btn"
         android:text="@string/PraDr"
-        android:textSize="16dp"
-        ></androidx.appcompat.widget.AppCompatButton>
+        android:textSize="16sp"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glBetweenBtn4andBt5"
@@ -182,7 +180,7 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintGuide_percent="0.78"
-        ></androidx.constraintlayout.widget.Guideline>
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/slThemeDr"
@@ -196,8 +194,8 @@
         app:layout_constraintDimensionRatio="7.3:1"
         android:background="@drawable/back_for_btn"
         android:text="@string/DicThemeDr"
-        android:textSize="16dp"
-        ></androidx.appcompat.widget.AppCompatButton>
+        android:textSize="16sp"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glBetweenBtn5andBt6"
@@ -206,7 +204,7 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintGuide_percent="0.88"
-        ></androidx.constraintlayout.widget.Guideline>
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/slAlphDr"
@@ -220,8 +218,8 @@
         app:layout_constraintHeight_percent="0.07"
         app:layout_constraintDimensionRatio="7.3:1"
         android:text="@string/DicAlphDr"
-        android:textSize="16dp"
-        ></androidx.appcompat.widget.AppCompatButton>
+        android:textSize="16sp"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

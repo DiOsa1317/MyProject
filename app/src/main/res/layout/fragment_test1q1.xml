@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHeight_percent="0.22"
         android:background="@drawable/rectangle_1_cap"
-        ></View>
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topGuideline"
@@ -27,7 +27,7 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="@+id/main_rectangle"
         app:layout_constraintGuide_percent="0.03"
-        ></androidx.constraintlayout.widget.Guideline>
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/leftGuideline"
@@ -36,7 +36,7 @@
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintGuide_percent="0.03"
-        ></androidx.constraintlayout.widget.Guideline>
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/rightGuideline"
@@ -45,59 +45,57 @@
         android:orientation="vertical"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintGuide_percent="0.97"
-        ></androidx.constraintlayout.widget.Guideline>
+        />
 
     <TextView
         android:id="@+id/slAlphFrasHead"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center|left"
+        android:gravity="center|start"
         android:text="@string/Test1"
         android:textColor="@color/black"
-        android:textSize="28dp"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="@+id/main_rectangle"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintHeight_percent="0.12"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-        ></TextView>
+        />
 
     <View
         android:id="@+id/fill0"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center|left"
+        android:gravity="center|start"
         app:layout_constraintTop_toBottomOf="@+id/main_rectangle"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintHeight_percent="0.02"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-
-        ></View>
+        />
 
     <TextView
         android:id="@+id/question1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center|left"
+        android:gravity="center|start"
         android:text="@string/Test1"
         android:textColor="@color/black"
-        android:textSize="24dp"
+        android:textSize="24sp"
         app:layout_constraintTop_toBottomOf="@+id/fill0"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintHeight_percent="0.05"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-        ></TextView>
+        />
 
     <View
         android:id="@+id/fill1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center|left"
+        android:gravity="center|start"
         app:layout_constraintTop_toBottomOf="@+id/question1"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintHeight_percent="0.02"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-
-        ></View>
+        />
 
     <ImageView
         android:id="@+id/q1"
@@ -111,19 +109,18 @@
         app:layout_constraintHeight_percent="0.38"
         android:background="@drawable/registration_rectangle"
         app:layout_constraintDimensionRatio="1.3:1"
-        ></ImageView>
+        />
 
     <View
         android:id="@+id/fill2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center|left"
+        android:gravity="center|start"
         app:layout_constraintTop_toBottomOf="@+id/q1"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintHeight_percent="0.02"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-
-        ></View>
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ans1"
@@ -137,20 +134,19 @@
         app:layout_constraintHeight_percent="0.05"
         app:layout_constraintDimensionRatio="10.5:1"
         android:text="@string/Answer1"
-        android:textSize="16dp"
-        ></androidx.appcompat.widget.AppCompatButton>
+        android:textSize="16sp"
+        />
 
     <View
         android:id="@+id/fill3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center|left"
+        android:gravity="center|start"
         app:layout_constraintTop_toBottomOf="@+id/ans1"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintHeight_percent="0.02"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-
-        ></View>
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ans2"
@@ -164,20 +160,19 @@
         app:layout_constraintHeight_percent="0.05"
         app:layout_constraintDimensionRatio="10.5:1"
         android:text="@string/Answer2"
-        android:textSize="16dp"
-        ></androidx.appcompat.widget.AppCompatButton>
+        android:textSize="16sp"
+        />
 
     <View
         android:id="@+id/fill4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center|left"
+        android:gravity="center|start"
         app:layout_constraintTop_toBottomOf="@+id/ans2"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintHeight_percent="0.02"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-
-        ></View>
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ans3"
@@ -191,20 +186,19 @@
         app:layout_constraintHeight_percent="0.05"
         app:layout_constraintDimensionRatio="10.5:1"
         android:text="@string/Answer3"
-        android:textSize="16dp"
-        ></androidx.appcompat.widget.AppCompatButton>
+        android:textSize="16sp"
+        />
 
     <View
         android:id="@+id/fill5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center|left"
+        android:gravity="center|start"
         app:layout_constraintTop_toBottomOf="@+id/ans3"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintHeight_percent="0.02"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-
-        ></View>
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ans4"
@@ -218,8 +212,8 @@
         app:layout_constraintHeight_percent="0.05"
         app:layout_constraintDimensionRatio="10.5:1"
         android:text="@string/Answer3"
-        android:textSize="16dp"
-        ></androidx.appcompat.widget.AppCompatButton>
+        android:textSize="16sp"
+        />
 
 
 
