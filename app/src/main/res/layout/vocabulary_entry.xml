@@ -5,20 +5,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    tools:context=".MainActivity"
     android:background="@color/background">
 
 
-<View
-android:id="@+id/main_rectangle"
-android:layout_width="0dp"
-android:layout_height="0dp"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintHeight_percent="0.25"
-android:background="@drawable/rectangle_1_cap"
-    />
+    <View
+        android:id="@+id/main_rectangle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        android:background="@drawable/rectangle_1_cap"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topGuideline"
@@ -57,38 +56,28 @@ android:background="@drawable/rectangle_1_cap"
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/backFromDic"
+        android:id="@+id/backFromThisIdiom"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
         android:background="@drawable/back_icon"
         app:layout_constraintTop_toBottomOf="@id/topGuideline"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHeight_percent="0.06"
         app:layout_constraintDimensionRatio="1:1"
         />
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/search"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:background="@drawable/search_image"
-        app:layout_constraintTop_toBottomOf="@id/topGuideline"
-        app:layout_constraintEnd_toEndOf="@id/rightGuideline"
-        app:layout_constraintHeight_percent="0.08"
-        app:layout_constraintDimensionRatio="1:1"/>
 
     <TextView
         android:id="@+id/slAlphFrasHead"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center|start"
-        android:text="@string/DicAlphFrasHead"
+        android:text="@string/NameOfIdiom"
         android:textColor="@color/black"
         android:textSize="30sp"
-        app:layout_constraintTop_toBottomOf="@+id/backFromDic"
+        app:layout_constraintTop_toBottomOf="@+id/backFromThisIdiom"
         app:layout_constraintBottom_toBottomOf="@+id/main_rectangle"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintHeight_percent="0.13"
@@ -106,18 +95,62 @@ android:background="@drawable/rectangle_1_cap"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
         />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/dicRecyclerView"
+    <TextView
+        android:id="@+id/MeaningOfIdiom"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center|start"
+        android:text="@string/MeaningOfIdiom"
+        android:textColor="@color/black"
+        android:textSize="25sp"
         app:layout_constraintTop_toBottomOf="@+id/fill1"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomGuideline"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+        app:layout_constraintHeight_percent="0.09"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        />
+
+    <TextView
+        android:id="@+id/MeaningOfThisIdiom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="@string/MeaningOfThisIdiom"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/MeaningOfIdiom"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+        app:layout_constraintHeight_percent="0.29"
+        app:layout_constraintStart_toStartOf="@id/leftGuideline"
+        />
+
+    <TextView
+        android:id="@+id/Examples"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="@string/Examples"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/MeaningOfThisIdiom"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintStart_toStartOf="@id/leftGuideline"
+        />
+
+    <TextView
+        android:id="@+id/ExamplesOfThis"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="@string/ExamplesOfThis"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/Examples"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+        app:layout_constraintHeight_percent="0.29"
+        app:layout_constraintStart_toStartOf="@id/leftGuideline"
         />
 
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

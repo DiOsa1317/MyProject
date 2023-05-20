@@ -34,6 +34,14 @@
     <string name="Answer4"> Ответ №4 </string>
 
     <string name="Start"> Начать </string>
+    <string name="ListOfTests"><b> Список тестов </b></string>
+    <string name="ThemeOfTest"><b> Тема №1 </b></string>
+
+    <string name="NameOfIdiom"><b> Фразеологизм №1 </b></string>
+    <string name="MeaningOfIdiom"><b> Значение фразеологизма </b></string>
+    <string name="MeaningOfThisIdiom"> Значение фразеологизма </string>
+    <string name="Examples"><b> Примеры употребления </b></string>
+    <string name="ExamplesOfThis">Примеры употребления </string>
 
 
 

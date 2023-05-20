@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graphe"
+    app:startDestination="@id/mainFragment"
+    >
+
+
+    <fragment
+        tools:layout="@layout/list_of_tests"
+        android:id="@+id/ListOfTests"
+        android:name="com.example.russianidioms.fragments.TestsFragment"
+        android:label="ListOfTestFragment">
+        <action
+            android:id="@+id/action_fromListOfTests_to_fragmentTest"
+            app:destination="@+id/fragmentTest"
+        />
+        <action
+            android:id="@+id/action_ListOfTests_to_mainFragment"
+            app:destination="@id/mainFragment" />
+
+    </fragment>
+
+    <fragment
+        tools:layout="@layout/fragment_test"
+        android:id="@+id/fragmentTest"
+        android:name="com.example.russianidioms.fragments.TestFragment"
+        android:label="ListOfTestFragment">
+        <action
+            android:id="@+id/action_fragmentTest_to_ListOfTests"
+            app:destination="@id/ListOfTests" />
+        <action
+            android:id="@+id/action_fragmentTest_self"
+            app:destination="@id/fragmentTest" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        tools:layout="@layout/visial_main_xml"
+        android:name="com.example.russianidioms.fragments.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_ListOfTests"
+            app:destination="@id/ListOfTests" />
+        <action
+            android:id="@+id/action_mainFragment_to_dictionaryFragment"
+            app:destination="@id/dictionaryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dictionaryFragment"
+        tools:layout="@layout/dictionary"
+        android:name="com.example.russianidioms.fragments.DictionaryFragment"
+        android:label="DictionaryFragment" >
+        <action
+            android:id="@+id/action_dictionaryFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_dictionaryFragment_to_idiomFragment"
+            app:destination="@id/idiomFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/idiomFragment"
+        tools:layout="@layout/vocabulary_entry"
+        android:name="com.example.russianidioms.fragments.IdiomFragment"
+        android:label="IdiomFragment" >
+        <action
+            android:id="@+id/action_idiomFragment_to_dictionaryFragment"
+            app:destination="@id/dictionaryFragment" />
+    </fragment>
+
+
+</navigation>
