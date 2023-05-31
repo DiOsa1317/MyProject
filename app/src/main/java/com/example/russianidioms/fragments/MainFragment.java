@@ -19,17 +19,45 @@ public class MainFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.visial_main_xml, container, false);
         AppCompatButton btn_PracForIdioms = view.findViewById(R.id.PractiseFras);
-        AppCompatButton btn_DicOfIdioms = view.findViewById(R.id.slAlphFras);
+        AppCompatButton btn_PracForDrWords = view.findViewById(R.id.PractiseDr);
+        AppCompatButton btn_DicOfIdiomsByAlph = view.findViewById(R.id.slAlphFras);
+        AppCompatButton btn_DicOfIdiomsByTheme = view.findViewById(R.id.slThemeFras);
+        AppCompatButton btn_DicOfDrByTheme = view.findViewById(R.id.slThemeDr);
+        AppCompatButton btn_DicOfDrByAlph = view.findViewById(R.id.slAlphDr);
         btn_PracForIdioms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(MainFragment.this).navigate(R.id.action_mainFragment_to_ListOfTests);
             }
         });
-        btn_DicOfIdioms.setOnClickListener(new View.OnClickListener() {
+        btn_DicOfIdiomsByAlph.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(MainFragment.this).navigate(R.id.action_mainFragment_to_dictionaryFragment);
+            }
+        });
+        btn_PracForDrWords.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MainFragment.this).navigate(R.id.action_mainFragment_to_drTestsFragment);
+            }
+        });
+        btn_DicOfIdiomsByTheme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MainFragment.this).navigate(R.id.action_mainFragment_to_dictionaryIdByThemeFragment);
+            }
+        });
+        btn_DicOfDrByTheme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MainFragment.this).navigate(R.id.action_mainFragment_to_dictionaryDrByThemeFragment);
+            }
+        });
+        btn_DicOfDrByAlph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MainFragment.this).navigate(R.id.action_mainFragment_to_dictionaryDrByAlphFragment);
             }
         });
         return view;

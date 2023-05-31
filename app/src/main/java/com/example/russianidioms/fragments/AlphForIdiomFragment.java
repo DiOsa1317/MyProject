@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,7 +13,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.russianidioms.R;
 
-public class IdiomFragment extends Fragment {
+public class AlphForIdiomFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.vocabulary_entry, container, false);
@@ -22,7 +21,7 @@ public class IdiomFragment extends Fragment {
         btn_backToDictionary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(IdiomFragment.this).navigate(R.id.action_idiomFragment_to_dictionaryFragment);
+                NavHostFragment.findNavController(AlphForIdiomFragment.this).navigate(R.id.action_alphForIdiomFragment_to_dictionaryIdiomByAlphFragment);
             }
         });
         return view;

@@ -20,7 +20,7 @@ import com.example.russianidioms.domain.WordFromIdiomDIc;
 import java.util.List;
 
 
-public class DictionaryFragment extends Fragment {
+public class DictionaryIdiomByAlphFragment extends Fragment {
 
 
     @Override
@@ -29,7 +29,7 @@ public class DictionaryFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.dictionary, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.dicRecyclerView);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
         List<WordFromIdiomDIc> words = List.of(
                 new WordFromIdiomDIc(1,"Авгиевы конюшни", "Очень грязное место"),
                 new WordFromIdiomDIc(2,"Бить баклуши", "Заниматься бесполезным делом"),
@@ -44,17 +44,21 @@ public class DictionaryFragment extends Fragment {
                 new WordFromIdiomDIc(11,"Гадкий утёнок", "Некрасивый человек"),
                 new WordFromIdiomDIc(12,"Гадкий утёнок", "Некрасивый человек"),
                 new WordFromIdiomDIc(13,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(14,"Гадкий утёнок", "Некрасивый человек")
+                new WordFromIdiomDIc(14,"Гадкий утёнок", "Некрасивый человек"),
+                new WordFromIdiomDIc(1,"Авгиевы конюшни", "Очень грязное место"),
+                new WordFromIdiomDIc(1,"Авгиевы конюшни", "Очень грязное место"),
+                new WordFromIdiomDIc(1,"Авгиевы конюшни", "Очень грязное место"),
+                new WordFromIdiomDIc(1,"Авгиевы конюшни", "Очень грязное место")
                 );
         Log.e("Before adapter", "Construction");
-        DictionaryIdByAlphAdapter adapter = new DictionaryIdByAlphAdapter(words, getContext(), DictionaryFragment.this);
+        DictionaryIdByAlphAdapter adapter = new DictionaryIdByAlphAdapter(words, getContext(), DictionaryIdiomByAlphFragment.this);
         recyclerView.setAdapter(adapter);
         Log.e("After adapter", "Where?");
         AppCompatButton backFromDic = view.findViewById(R.id.backFromDic);
         backFromDic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(DictionaryFragment.this).navigate(R.id.action_dictionaryFragment_to_mainFragment);
+                NavHostFragment.findNavController(DictionaryIdiomByAlphFragment.this).navigate(R.id.action_dictionaryFragment_to_mainFragment);
             }
         });
         return view;

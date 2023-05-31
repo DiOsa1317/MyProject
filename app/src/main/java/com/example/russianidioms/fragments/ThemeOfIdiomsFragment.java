@@ -14,13 +14,12 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.russianidioms.R;
-import com.example.russianidioms.adapter.DictionaryIdByAlphAdapter;
-import com.example.russianidioms.adapter.ThemeAdapter;
+import com.example.russianidioms.adapter.ThemeOfIdiomsAdapter;
 import com.example.russianidioms.domain.WordFromIdiomDIc;
 
 import java.util.List;
 
-public class ThemeFragment extends Fragment {
+public class ThemeOfIdiomsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,7 +44,7 @@ public class ThemeFragment extends Fragment {
                 new WordFromIdiomDIc(14,"Гадкий утёнок", "Некрасивый человек")
         );
         Log.e("Before adapter", "Construction");
-        ThemeAdapter adapter = new ThemeAdapter(words, getContext(), ThemeFragment.this);
+        ThemeOfIdiomsAdapter adapter = new ThemeOfIdiomsAdapter(words, getContext(), ThemeOfIdiomsFragment.this);
         recyclerView.setAdapter(adapter);
         TextView header = view.findViewById(R.id.slHead);
         header.setText(R.string.ThemeFromDic);
@@ -54,7 +53,7 @@ public class ThemeFragment extends Fragment {
         backFromTheme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(ThemeFragment.this).navigate(R.id.action_themeFragment_to_dictionaryIdByThemeFragment);
+                NavHostFragment.findNavController(ThemeOfIdiomsFragment.this).navigate(R.id.action_themeFragment_to_dictionaryIdByThemeFragment);
             }
         });
         return view;

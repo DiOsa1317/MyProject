@@ -7,28 +7,27 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.russianidioms.R;
 import com.example.russianidioms.domain.WordFromIdiomDIc;
-import com.example.russianidioms.fragments.DictionaryFragment;
+import com.example.russianidioms.fragments.DictionaryIdiomByAlphFragment;
 
 import java.util.List;
 
-public class DictionaryAdapter  extends  RecyclerView.Adapter<DictionaryAdapter.ViewHolder> {
+public class DictionaryIdByAlphAdapter extends  RecyclerView.Adapter<DictionaryIdByAlphAdapter.ViewHolder> {
 
 private List<WordFromIdiomDIc> words;
 private Context context;
 private LayoutInflater layoutInflater;
-private DictionaryFragment dictionaryFragment;
+private DictionaryIdiomByAlphFragment dictionaryIdiomByAlphFragment;
 
-public DictionaryAdapter(List<WordFromIdiomDIc> words, Context context, DictionaryFragment dictionaryFragment) {
+public DictionaryIdByAlphAdapter(List<WordFromIdiomDIc> words, Context context, DictionaryIdiomByAlphFragment dictionaryIdiomByAlphFragment) {
         this.words = words;
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
-        this.dictionaryFragment = dictionaryFragment;
+        this.dictionaryIdiomByAlphFragment = dictionaryIdiomByAlphFragment;
         }
 
 @NonNull
@@ -38,13 +37,13 @@ public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(view);
         }
 
-    public void onBindViewHolder(@NonNull DictionaryAdapter.ViewHolder holder, int position) { //all actions here
+    public void onBindViewHolder(@NonNull DictionaryIdByAlphAdapter.ViewHolder holder, int position) { //all actions here
     WordFromIdiomDIc wordFromIdiomDIc = words.get(position);
         holder.nameOfWord.setText(wordFromIdiomDIc.getName());
         holder.nameOfWord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(dictionaryFragment).navigate(R.id.action_dictionaryFragment_to_idiomFragment);
+                NavHostFragment.findNavController(dictionaryIdiomByAlphFragment).navigate(R.id.action_dictionaryIdiomByAlphFragment_to_alphForIdiomFragment);
             }
         });
 

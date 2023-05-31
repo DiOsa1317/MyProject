@@ -13,7 +13,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.russianidioms.R;
 
-public class ThemeForAlphFragment extends Fragment {
+public class ThemeForDrFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.vocabulary_entry, container, false);
@@ -21,7 +21,7 @@ public class ThemeForAlphFragment extends Fragment {
         btn_backToTheme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(ThemeForAlphFragment.this).navigate(R.id.action_themeFragment_to_themeOfDrFragment);
+                NavHostFragment.findNavController(ThemeForDrFragment.this).navigate(R.id.action_themeForDrFragment_to_themeOfDrFragment);
             }
         });
         return view;

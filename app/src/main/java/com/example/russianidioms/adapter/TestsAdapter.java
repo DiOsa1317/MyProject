@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.russianidioms.R;
 import com.example.russianidioms.domain.IdiomTest;
-import com.example.russianidioms.fragments.TestsFragment;
+import com.example.russianidioms.fragments.IdiomTestsFragment;
 
 import java.util.List;
 
@@ -22,13 +22,13 @@ public class TestsAdapter extends RecyclerView.Adapter<TestsAdapter.ViewHolder> 
     private List<IdiomTest> tests;
     private Context context;
     private LayoutInflater layoutInflater;
-    private TestsFragment testsFragment;
+    private IdiomTestsFragment idiomTestsFragment;
 
-    public TestsAdapter(List<IdiomTest> tests, Context context, TestsFragment testsFragment) {
+    public TestsAdapter(List<IdiomTest> tests, Context context, IdiomTestsFragment idiomTestsFragment) {
         this.tests = tests;
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
-        this.testsFragment = testsFragment;
+        this.idiomTestsFragment = idiomTestsFragment;
     }
 
     @NonNull
@@ -44,11 +44,11 @@ public class TestsAdapter extends RecyclerView.Adapter<TestsAdapter.ViewHolder> 
         holder.backImage.setImageResource(R.drawable.registration_rectangle);
         holder.nameOfTest.setText(idiomTest.getName());
         holder.themeOfTest.setText(idiomTest.getTheme());
-        holder.btnStart.setText(String.valueOf(idiomTest.getBtn_start()));
+        holder.btnStart.setText(R.string.Start);
         holder.btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(testsFragment).navigate(R.id.action_fromListOfTests_to_fragmentTest);
+                NavHostFragment.findNavController(idiomTestsFragment).navigate(R.id.action_IdiomTestsFragment_to_idiomTestFragment);
             }
         });
     }

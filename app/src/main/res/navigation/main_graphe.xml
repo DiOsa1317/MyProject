@@ -9,30 +9,16 @@
 
     <fragment
         tools:layout="@layout/list_of_tests"
-        android:id="@+id/ListOfTests"
-        android:name="com.example.russianidioms.fragments.TestsFragment"
-        android:label="ListOfTestFragment">
+        android:id="@+id/IdiomTestsFragment"
+        android:name="com.example.russianidioms.fragments.IdiomTestsFragment"
+        android:label="IdiomTestsFragment">
         <action
-            android:id="@+id/action_fromListOfTests_to_fragmentTest"
-            app:destination="@+id/fragmentTest"
-        />
-        <action
-            android:id="@+id/action_ListOfTests_to_mainFragment"
+            android:id="@+id/action_IdiomTestsFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
-
-    </fragment>
-
-    <fragment
-        tools:layout="@layout/fragment_test"
-        android:id="@+id/fragmentTest"
-        android:name="com.example.russianidioms.fragments.TestFragment"
-        android:label="ListOfTestFragment">
         <action
-            android:id="@+id/action_fragmentTest_to_ListOfTests"
-            app:destination="@id/ListOfTests" />
-        <action
-            android:id="@+id/action_fragmentTest_self"
-            app:destination="@id/fragmentTest" />
+            android:id="@+id/action_IdiomTestsFragment_to_idiomTestFragment"
+            app:destination="@id/idiomTestFragment" />
+
     </fragment>
 
     <fragment
@@ -42,33 +28,178 @@
         android:label="MainFragment" >
         <action
             android:id="@+id/action_mainFragment_to_ListOfTests"
-            app:destination="@id/ListOfTests" />
+            app:destination="@id/IdiomTestsFragment" />
         <action
             android:id="@+id/action_mainFragment_to_dictionaryFragment"
-            app:destination="@id/dictionaryFragment" />
+            app:destination="@id/dictionaryIdiomByAlphFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_drTestsFragment"
+            app:destination="@id/drTestsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_dictionaryIdByThemeFragment"
+            app:destination="@id/dictionaryIdByThemeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_dictionaryDrByThemeFragment"
+            app:destination="@id/dictionaryDrByThemeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_dictionaryDrByAlphFragment"
+            app:destination="@id/dictionaryDrByAlphFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/dictionaryFragment"
+        android:id="@+id/dictionaryIdiomByAlphFragment"
         tools:layout="@layout/dictionary"
-        android:name="com.example.russianidioms.fragments.DictionaryFragment"
+        android:name="com.example.russianidioms.fragments.DictionaryIdiomByAlphFragment"
         android:label="DictionaryFragment" >
         <action
             android:id="@+id/action_dictionaryFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
         <action
-            android:id="@+id/action_dictionaryFragment_to_idiomFragment"
-            app:destination="@id/idiomFragment" />
+            android:id="@+id/action_dictionaryIdiomByAlphFragment_to_alphForIdiomFragment"
+            app:destination="@id/alphForIdiomFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/idiomFragment"
-        tools:layout="@layout/vocabulary_entry"
-        android:name="com.example.russianidioms.fragments.IdiomFragment"
-        android:label="IdiomFragment" >
+        android:id="@+id/drTestsFragment"
+        tools:layout="@layout/list_of_tests"
+        android:name="com.example.russianidioms.fragments.DrTestsFragment"
+        android:label="DrTestsFragment" >
         <action
-            android:id="@+id/action_idiomFragment_to_dictionaryFragment"
-            app:destination="@id/dictionaryFragment" />
+            android:id="@+id/action_drTestsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_drTestsFragment_to_drTestFragment"
+            app:destination="@id/drTestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/drTestFragment"
+        tools:layout="@layout/fragment_test"
+        android:name="com.example.russianidioms.fragments.DrTestFragment"
+        android:label="DrTestFragment" >
+        <action
+            android:id="@+id/action_drTestFragment_to_drTestsFragment"
+            app:destination="@id/drTestsFragment" />
+        <action
+            android:id="@+id/action_drTestFragment_self"
+            app:destination="@id/drTestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/idiomTestFragment"
+        tools:layout="@layout/fragment_test"
+        android:name="com.example.russianidioms.fragments.IdiomTestFragment"
+        android:label="IdiomTestFragment" >
+        <action
+            android:id="@+id/action_idiomTestFragment_to_ListOfTests"
+            app:destination="@id/IdiomTestsFragment" />
+        <action
+            android:id="@+id/action_idiomTestFragment_self"
+            app:destination="@id/idiomTestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dictionaryIdByThemeFragment"
+        tools:layout="@layout/dictionary"
+        android:name="com.example.russianidioms.fragments.DictionaryIdByThemeFragment"
+        android:label="DictionaryIdByThemeFragment" >
+        <action
+            android:id="@+id/action_dictionaryIdByThemeFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_dictionaryIdByThemeFragment_to_themeFragment"
+            app:destination="@id/themeOfIdiomsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/themeOfIdiomsFragment"
+        tools:layout="@layout/dictionary"
+        android:name="com.example.russianidioms.fragments.ThemeOfIdiomsFragment"
+        android:label="ThemeOfIdiomFragment" >
+        <action
+            android:id="@+id/action_themeFragment_to_dictionaryIdByThemeFragment"
+            app:destination="@id/dictionaryIdByThemeFragment" />
+        <action
+            android:id="@+id/action_themeOfIdiomsFragment_to_themeForIdiomFragment"
+            app:destination="@id/themeForIdiomFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dictionaryDrByThemeFragment"
+        tools:layout="@layout/dictionary"
+        android:name="com.example.russianidioms.fragments.DictionaryDrByThemeFragment"
+        android:label="DictionaryDrByThemeFragment" >
+        <action
+            android:id="@+id/action_dictionaryDrByThemeFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_dictionaryDrByThemeFragment_to_themeOfDrFragment"
+            app:destination="@id/themeOfDrFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/themeOfDrFragment"
+        tools:layout="@layout/dictionary"
+        android:name="com.example.russianidioms.fragments.ThemeOfDrFragment"
+        android:label="ThemeOfDrFragment" >
+        <action
+            android:id="@+id/action_themeOfDrFragment_to_dictionaryDrByThemeFragment"
+            app:destination="@id/dictionaryDrByThemeFragment" />
+        <action
+            android:id="@+id/action_themeOfDrFragment_to_themeForDrFragment"
+            app:destination="@id/themeForDrFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dictionaryDrByAlphFragment"
+        tools:layout="@layout/dictionary"
+        android:name="com.example.russianidioms.fragments.DictionaryDrByAlphFragment"
+        android:label="DictionaryDrByAlphFragment" >
+        <action
+            android:id="@+id/action_dictionaryDrByAlphFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_dictionaryDrByAlphFragment_to_alphForDrFragment"
+            app:destination="@id/alphForDrFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/themeForDrFragment"
+        tools:layout="@layout/vocabulary_entry"
+        android:name="com.example.russianidioms.fragments.ThemeForDrFragment"
+        android:label="ThemeForDrFragment" >
+        <action
+            android:id="@+id/action_themeForDrFragment_to_themeOfDrFragment"
+            app:destination="@id/themeOfDrFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/alphForIdiomFragment"
+        tools:layout="@layout/vocabulary_entry"
+        android:name="com.example.russianidioms.fragments.AlphForIdiomFragment"
+        android:label="AlphForIdiomFragment" >
+        <action
+            android:id="@+id/action_alphForIdiomFragment_to_dictionaryIdiomByAlphFragment"
+            app:destination="@id/dictionaryIdiomByAlphFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/alphForDrFragment"
+        tools:layout="@layout/vocabulary_entry"
+        android:name="com.example.russianidioms.fragments.AlphForDrFragment"
+        android:label="AlphForDrFragment" >
+        <action
+            android:id="@+id/action_alphForDrFragment_to_dictionaryDrByAlphFragment"
+            app:destination="@id/dictionaryDrByAlphFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/themeForIdiomFragment"
+        tools:layout="@layout/vocabulary_entry"
+        android:name="com.example.russianidioms.fragments.ThemeForIdiomFragment"
+        android:label="ThemeForIdiomFragment" >
+        <action
+            android:id="@+id/action_themeForIdiomFragment_to_themeOfIdiomsFragment"
+            app:destination="@id/themeOfIdiomsFragment" />
     </fragment>
 
 

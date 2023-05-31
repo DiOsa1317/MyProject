@@ -4,8 +4,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="Nameofuser"><b>Имя пользователя</b></string>
-    <string name="DicAlphFras"> Словарь фразелогизмов по алфавиту </string>
-    <string name="DicThemeFras"> Словарь фразелогизмов по темам </string>
+    <string name="DicAlphFras"> Словарь фразеологизмов по алфавиту </string>
+    <string name="DicThemeFras"> Словарь фразеологизмов по темам </string>
     <string name="PracFras"> Практика по фразеологизмам </string>
     <string name="PraDr"> Практика по древнерусским словам </string>
     <string name="DicThemeDr"> Словарь древнерусских слов по темам </string>
@@ -19,8 +19,8 @@
     <string name="Go_into"><b> Вход </b> </string>
     <string name="Registration"><b> Регистрация </b> </string>
 
-    <string name="DicAlphFrasHead"> <b> Словарь фразелогизмов по алфавиту </b></string>
-    <string name="DicThemeFrasHead"> <b> Словарь фразелогизмов по темам  </b></string>
+    <string name="DicAlphFrasHead"> <b> Словарь фразеологизмов по алфавиту </b></string>
+    <string name="DicThemeFrasHead"> <b> Словарь фразеологизмов по темам  </b></string>
     <string name="PracFrasHead"> <b> Практика по фразеологизмам </b> </string>
     <string name="PraDrHead"> <b> Практика по древнерусским словам </b> </string>
     <string name="DicThemeDrHead"> <b> Словарь древнерусских слов по темам </b> </string>
@@ -42,6 +42,9 @@
     <string name="MeaningOfThisIdiom"> Значение фразеологизма </string>
     <string name="Examples"><b> Примеры употребления </b></string>
     <string name="ExamplesOfThis">Примеры употребления </string>
+
+    <string name="ThemeFromDic"><b> Тема из словаря </b></string>
+    <string name="GoToWord"> Перейти </string>
 
 
 

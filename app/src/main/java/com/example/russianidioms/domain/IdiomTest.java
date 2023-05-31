@@ -6,16 +6,15 @@ import android.graphics.drawable.Drawable;
 import com.example.russianidioms.R;
 
 public class IdiomTest {
-    private final long id;
-    private final String name;
-    private final String theme;
-    private final String varient1;
-    private final String varient2;
-    private final String varient3;
-    private final String varient4;
-    private final Drawable problem;
-    private final String btn_start = "Начать";
-    private final int back= R.drawable.registration_rectangle;
+    private long id;
+    private String name;
+    private String theme;
+    private String varient1;
+    private String varient2;
+    private String varient3;
+    private String varient4;
+    private Drawable problem;
+
 
 
 
@@ -28,18 +27,21 @@ public class IdiomTest {
         this.varient3 = varient3;
         this.varient4 = varient4;
         this.problem = problem;
-        //this.back=back;
     }
 
-
+    public IdiomTest(String name, String theme, String varient1, String varient2, String varient3, String varient4, Drawable problem) {
+        this.name=name;
+        this.theme = theme;
+        this.varient1 = varient1;
+        this.varient2 = varient2;
+        this.varient3 = varient3;
+        this.varient4 = varient4;
+        this.problem = problem;
+    }
 
     public Drawable getProblem() {
         return problem;
     }
-
-    public String getBtn_start() {
-     return btn_start;
-   }
 
     public String getName() {
        return name;
@@ -81,7 +83,5 @@ public class IdiomTest {
                 '}';
     }
 
-    public int getBack() {
-        return back ;
-    }
+
 }

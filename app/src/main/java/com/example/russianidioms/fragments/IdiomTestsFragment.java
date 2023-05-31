@@ -5,7 +5,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,7 +20,7 @@ import com.example.russianidioms.domain.IdiomTest;
 
 import java.util.List;
 
-public class TestsFragment extends Fragment {
+public class IdiomTestsFragment extends Fragment {
     @Override
     @Nullable
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -39,14 +38,14 @@ public class TestsFragment extends Fragment {
                         "мышь нарыдала", "медведь натопал", "кукушка накуковала",
                         getResources().getDrawable(R.drawable.ic_baseline_work_24) ) );
         Log.e("Before adapter", "Construction");
-        TestsAdapter adapter = new TestsAdapter(tests, getContext(), TestsFragment.this);
+        TestsAdapter adapter = new TestsAdapter(tests, getContext(), IdiomTestsFragment.this);
         recyclerView.setAdapter(adapter);
         Log.e("After adapter", "Where?");
         AppCompatButton back = view.findViewById(R.id.backFromTests);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(TestsFragment.this).navigate(R.id.action_ListOfTests_to_mainFragment);
+                NavHostFragment.findNavController(IdiomTestsFragment.this).navigate(R.id.action_IdiomTestsFragment_to_mainFragment);
             }
         });
         return view;
