@@ -4,6 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:viewBindingIgnore="false"
     android:layout_width="match_parent"
     tools:context=".MainActivity"
     android:background="@color/background">
@@ -116,7 +117,8 @@ android:background="@drawable/rectangle_1_cap"
         app:layout_constraintBottom_toBottomOf="@+id/bottomGuideline"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/word_from_dic"
+    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         />
 
 

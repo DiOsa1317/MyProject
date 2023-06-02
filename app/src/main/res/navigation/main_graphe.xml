@@ -181,6 +181,10 @@
         <action
             android:id="@+id/action_alphForIdiomFragment_to_dictionaryIdiomByAlphFragment"
             app:destination="@id/dictionaryIdiomByAlphFragment" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            app:nullable="false" />
     </fragment>
 
     <fragment

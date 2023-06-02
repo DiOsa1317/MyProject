@@ -9,7 +9,7 @@
     <string name="PracFras"> Практика по фразеологизмам </string>
     <string name="PraDr"> Практика по древнерусским словам </string>
     <string name="DicThemeDr"> Словарь древнерусских слов по темам </string>
-    <string name="DicAlphDr"> Словарь древнерусских по алфавиту </string>
+    <string name="DicAlphDr"> Словарь древнерусских слов по алфавиту </string>
 
     <string name="Greeting"><b>Добро пожаловать!</b></string>
     <string name="Login">Логин </string>

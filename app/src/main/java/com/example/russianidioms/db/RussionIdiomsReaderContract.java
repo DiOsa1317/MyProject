@@ -12,5 +12,6 @@ public class RussionIdiomsReaderContract {
         public static final String COLUMN_ID = "id";
         public static final String COLUMN_NAME= "name";
         public static final String COLUMN_MEANING = "meaning";
+        public static final String LOG_TAG = "log_tag";
     }
 }

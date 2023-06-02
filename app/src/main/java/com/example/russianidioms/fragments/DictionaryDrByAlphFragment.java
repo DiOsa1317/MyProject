@@ -14,9 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.russianidioms.R;
 import com.example.russianidioms.adapter.DictionaryDrByAlphAdapter;
-import com.example.russianidioms.adapter.DictionaryIdByAlphAdapter;
 import com.example.russianidioms.domain.WordFromDrDic;
-import com.example.russianidioms.domain.WordFromIdiomDIc;
 
 import java.util.List;
 

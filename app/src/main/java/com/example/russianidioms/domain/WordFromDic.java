@@ -36,4 +36,12 @@ public class WordFromDic {
                 ", meaning='" + meaning + '\'' +
                 '}';
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setMeaning(String meaning) {
+        this.meaning = meaning;
+    }
 }
