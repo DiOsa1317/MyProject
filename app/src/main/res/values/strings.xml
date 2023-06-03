@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="Nameofuser"><b>Имя пользователя</b></string>
+    <string name="Nameofuser"><b>Добро пожаловать! </b></string>
     <string name="DicAlphFras"> Словарь фразеологизмов по алфавиту </string>
     <string name="DicThemeFras"> Словарь фразеологизмов по темам </string>
     <string name="PracFras"> Практика по фразеологизмам </string>
@@ -27,7 +27,7 @@
     <string name="DicAlphDrHead"><b>Словарь древнерусских по алфавиту </b> </string>
     <string name="Element"> Элемент </string>
 
-    <string name="Test1"><b>Тест №1 </b></string>
+    <string name="Test1"><b>Тест</b></string>
     <string name="Answer1"> Ответ №1 </string>
     <string name="Answer2"> Ответ №2 </string>
     <string name="Answer3"> Ответ №3 </string>
@@ -40,7 +40,7 @@
     <string name="NameOfIdiom"><b> Фразеологизм №1 </b></string>
     <string name="MeaningOfIdiom"><b> Значение фразеологизма </b></string>
     <string name="MeaningOfThisIdiom"> Значение фразеологизма </string>
-    <string name="Examples"><b> Примеры употребления </b></string>
+    <string name="Examples"><b> История появления </b></string>
     <string name="ExamplesOfThis">Примеры употребления </string>
 
     <string name="ThemeFromDic"><b> Тема из словаря </b></string>

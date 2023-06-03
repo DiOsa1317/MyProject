@@ -69,7 +69,7 @@
         android:gravity="center"
         android:text="@string/Nameofuser"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="35sp"
         app:layout_constraintTop_toBottomOf="@+id/student"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.10"

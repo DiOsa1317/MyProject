@@ -42,7 +42,7 @@ public class TestsAdapter extends RecyclerView.Adapter<TestsAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) { //all actions here
         IdiomTest idiomTest = tests.get(position);
         holder.backImage.setImageResource(R.drawable.registration_rectangle);
-        holder.nameOfTest.setText(idiomTest.getName());
+        holder.nameOfTest.setText(R.string.Test1);
         holder.themeOfTest.setText(idiomTest.getTheme());
         holder.btnStart.setText(R.string.Start);
         holder.btnStart.setOnClickListener(new View.OnClickListener() {

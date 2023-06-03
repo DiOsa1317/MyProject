@@ -1,6 +1,7 @@
 package com.example.russianidioms.adapter;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,38 +13,39 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.russianidioms.R;
 import com.example.russianidioms.domain.WordFromDic;
-import com.example.russianidioms.domain.WordFromDrDic;
-import com.example.russianidioms.fragments.DictionaryDrByAlphFragment;
+import com.example.russianidioms.domain.WordFromIdiomDIc;
+import com.example.russianidioms.fragments.DictionaryIdiomByAlphFragment;
 
 import java.util.List;
 
-public class DictionaryDrByAlphAdapter extends RecyclerView.Adapter<DictionaryDrByAlphAdapter.ViewHolder>{
+public class DictionaryIdByAlphAdapter extends RecyclerView.Adapter<DictionaryIdByAlphAdapter.ViewHolder> {
+
     private List<WordFromDic> words;
     private Context context;
     private LayoutInflater layoutInflater;
-    private DictionaryDrByAlphFragment dictionaryDrByAlphFragment;
+    private DictionaryIdiomByAlphFragment dictionaryIdiomByAlphFragment;
 
-    public DictionaryDrByAlphAdapter(List<WordFromDic> words, Context context, DictionaryDrByAlphFragment dictionaryDrByAlphFragment) {
+    public DictionaryIdByAlphAdapter(List<WordFromDic> words, Context context, DictionaryIdiomByAlphFragment dictionaryIdiomByAlphFragment) {
         this.words = words;
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
-        this.dictionaryDrByAlphFragment = dictionaryDrByAlphFragment;
+        this.dictionaryIdiomByAlphFragment = dictionaryIdiomByAlphFragment;
     }
 
     @NonNull
     @Override
-    public DictionaryDrByAlphAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view  = layoutInflater.inflate(R.layout.word_from_dic, parent, false);
-        return new DictionaryDrByAlphAdapter.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
-    public void onBindViewHolder(@NonNull DictionaryDrByAlphAdapter.ViewHolder holder, int position) { //all actions here
+    public void onBindViewHolder(@NonNull DictionaryIdByAlphAdapter.ViewHolder holder, int position) { //all actions here
         WordFromDic wordFromDic = words.get(position);
         holder.nameOfWord.setText(wordFromDic.getName());
         holder.nameOfWord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(dictionaryDrByAlphFragment).navigate(R.id.action_dictionaryDrByAlphFragment_to_alphForDrFragment);
+                NavHostFragment.findNavController(dictionaryIdiomByAlphFragment).navigate(R.id.action_dictionaryIdiomByAlphFragment_to_alphForIdiomFragment);
             }
         });
 

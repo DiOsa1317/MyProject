@@ -28,17 +28,6 @@ public class ThemeOfDrFragment extends Fragment {
         View view = inflater.inflate(R.layout.dictionary, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.dicRecyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
-        List<WordFromDrDic> words = List.of(
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука")
-        );
-        Log.e("Before adapter", "Construction");
-        ThemeOfDrAdapter adapter = new ThemeOfDrAdapter(words, getContext(), ThemeOfDrFragment.this);
-        recyclerView.setAdapter(adapter);
         TextView header = view.findViewById(R.id.slHead);
         header.setText(R.string.ThemeFromDic);
         Log.e("After adapter", "Where?");

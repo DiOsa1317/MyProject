@@ -14,8 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.russianidioms.R;
 import com.example.russianidioms.adapter.DictionaryDrByAlphAdapter;
+import com.example.russianidioms.adapter.DictionaryIdByAlphAdapter;
+import com.example.russianidioms.dao.impl.WordFromIdiomDicSQLite;
+import com.example.russianidioms.domain.WordFromDic;
 import com.example.russianidioms.domain.WordFromDrDic;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DictionaryDrByAlphFragment extends Fragment {
@@ -26,15 +30,8 @@ public class DictionaryDrByAlphFragment extends Fragment {
         View view = inflater.inflate(R.layout.dictionary, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.dicRecyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
-        List<WordFromDrDic> words = List.of(
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука")
-        );
-        Log.e("Before adapter", "Construction");
+        List<WordFromDic> words = new ArrayList<>();
+        words = new WordFromIdiomDicSQLite(getContext()).findAll();
         DictionaryDrByAlphAdapter adapter = new DictionaryDrByAlphAdapter(words, getContext(), DictionaryDrByAlphFragment.this);
         recyclerView.setAdapter(adapter);
         Log.e("After adapter", "Where?");

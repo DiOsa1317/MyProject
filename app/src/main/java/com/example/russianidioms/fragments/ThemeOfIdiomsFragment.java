@@ -28,20 +28,20 @@ public class ThemeOfIdiomsFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.dicRecyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
         List<WordFromIdiomDIc> words = List.of(
-                new WordFromIdiomDIc(1,"Авгиевы конюшни", "Очень грязное место"),
-                new WordFromIdiomDIc(2,"Бить баклуши", "Заниматься бесполезным делом"),
-                new WordFromIdiomDIc(3,"Вить верёвки (из кого-то)", "Заставлять что-то делать. Отчитывать"),
-                new WordFromIdiomDIc(4,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(5,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(6,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(7,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(8,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(9,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(10,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(11,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(12,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(13,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(14,"Гадкий утёнок", "Некрасивый человек")
+                new WordFromIdiomDIc(1,"Авгиевы конюшни", "Очень грязное место", "1"),
+                new WordFromIdiomDIc(2,"Бить баклуши", "Заниматься бесполезным делом", "1"),
+                new WordFromIdiomDIc(3,"Вить верёвки (из кого-то)", "Заставлять что-то делать. Отчитывать", "1"),
+                new WordFromIdiomDIc(4,"Гадкий утёнок", "Некрасивый человек", "1"),
+                new WordFromIdiomDIc(5,"Гадкий утёнок", "Некрасивый человек", "1"),
+                new WordFromIdiomDIc(6,"Гадкий утёнок", "Некрасивый человек", "1"),
+                new WordFromIdiomDIc(7,"Гадкий утёнок", "Некрасивый человек", "1"),
+                new WordFromIdiomDIc(8,"Гадкий утёнок", "Некрасивый человек", "1"),
+                new WordFromIdiomDIc(9,"Гадкий утёнок", "Некрасивый человек", "1"),
+                new WordFromIdiomDIc(10,"Гадкий утёнок", "Некрасивый человек", "1"),
+                new WordFromIdiomDIc(11,"Гадкий утёнок", "Некрасивый человек", "1"),
+                new WordFromIdiomDIc(12,"Гадкий утёнок", "Некрасивый человек", "1"),
+                new WordFromIdiomDIc(13,"Гадкий утёнок", "Некрасивый человек", "1"),
+                new WordFromIdiomDIc(14,"Гадкий утёнок", "Некрасивый человек", "1")
         );
         Log.e("Before adapter", "Construction");
         ThemeOfIdiomsAdapter adapter = new ThemeOfIdiomsAdapter(words, getContext(), ThemeOfIdiomsFragment.this);

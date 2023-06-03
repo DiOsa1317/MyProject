@@ -31,19 +31,9 @@ public class DictionaryDrByThemeFragment extends Fragment {
         View view = inflater.inflate(R.layout.dictionary, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.dicRecyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-        List<WordFromDrDic> words = List.of(
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука"),
-                new WordFromDrDic(1,"десница", "правая рука")
-        );
-        List<ThemeOfDr> themes = List.of(new ThemeOfDr(1, "быт", words),
-                new ThemeOfDr(2, "война", words));
         Log.e("Before adapter", "Construction");
-        DictionaryDrByThemeAdapter adapter = new DictionaryDrByThemeAdapter(themes, getContext(), DictionaryDrByThemeFragment.this);
-        recyclerView.setAdapter(adapter);
+        //DictionaryDrByThemeAdapter adapter = new DictionaryDrByThemeAdapter(themes, getContext(), DictionaryDrByThemeFragment.this);
+      // recyclerView.setAdapter(adapter);
         Log.e("After adapter", "Where?");
         TextView header = view.findViewById(R.id.slHead);
         header.setText(R.string.DicThemeDrHead);

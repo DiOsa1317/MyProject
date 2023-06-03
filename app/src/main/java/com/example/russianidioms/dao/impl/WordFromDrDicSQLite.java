@@ -7,20 +7,20 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.example.russianidioms.dao.RussionIdiomsDao;
-import com.example.russianidioms.db.RussianIdiomsDbOpenHelper;
+import com.example.russianidioms.db.DrDbOpenHelper;
 import com.example.russianidioms.db.RussionIdiomsReaderContract;
 import com.example.russianidioms.domain.WordFromDic;
+import com.example.russianidioms.domain.WordFromDrDic;
 import com.example.russianidioms.domain.WordFromIdiomDIc;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class WordFromIdiomDicSQLite implements RussionIdiomsDao {
+public class WordFromDrDicSQLite implements RussionIdiomsDao {
+    private  final DrDbOpenHelper openHelper;
 
-    private  final RussianIdiomsDbOpenHelper openHelper;
-
-    public WordFromIdiomDicSQLite(Context context) {
-        this.openHelper = new RussianIdiomsDbOpenHelper(context);
+    public WordFromDrDicSQLite(Context context) {
+        this.openHelper = new DrDbOpenHelper(context);
     }
 
     @Override
@@ -28,21 +28,21 @@ public class WordFromIdiomDicSQLite implements RussionIdiomsDao {
         SQLiteDatabase sqLiteDatabase = openHelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(
-                RussionIdiomsReaderContract.DicOfIdioms.COLUMN_NAME, wordFromDic.getName()
+                RussionIdiomsReaderContract.DicOfDrWords.COLUMN_NAME, wordFromDic.getName()
         );
         contentValues.put(
-                RussionIdiomsReaderContract.DicOfIdioms.COLUMN_MEANING, wordFromDic.getMeaning()
+                RussionIdiomsReaderContract.DicOfDrWords.COLUMN_MEANING, wordFromDic.getMeaning()
         );
         contentValues.put(
-                RussionIdiomsReaderContract.DicOfIdioms.COLUMN_HISTORY, wordFromDic.getHistory()
+                RussionIdiomsReaderContract.DicOfDrWords.COLUMN_HISTORY, wordFromDic.getHistory()
         );
         long insert = sqLiteDatabase.insert(
-                RussionIdiomsReaderContract.DicOfIdioms.TABLE_NAME,
+                RussionIdiomsReaderContract.DicOfDrWords.TABLE_NAME,
                 null,
                 contentValues
         );
         sqLiteDatabase.close();
-        Log.i(RussionIdiomsReaderContract.DicOfIdioms.LOG_TAG, "inserted " + insert);
+        Log.i(RussionIdiomsReaderContract.DicOfDrWords.LOG_TAG, "inserted " + insert);
         return insert;
     }
 
@@ -51,7 +51,7 @@ public class WordFromIdiomDicSQLite implements RussionIdiomsDao {
         SQLiteDatabase sqLiteDatabase = openHelper.getReadableDatabase();
 
         Cursor cursor = sqLiteDatabase.query( //select
-                RussionIdiomsReaderContract.DicOfIdioms.TABLE_NAME,
+                RussionIdiomsReaderContract.DicOfDrWords.TABLE_NAME,
                 null,
                 null,
                 null,
@@ -62,24 +62,24 @@ public class WordFromIdiomDicSQLite implements RussionIdiomsDao {
         );
         List<WordFromDic> wordsFromDic = new ArrayList<>();
         if(cursor.moveToFirst()) {
-            int id = cursor.getColumnIndex(RussionIdiomsReaderContract.DicOfIdioms.COLUMN_ID);
-            int name = cursor.getColumnIndex(RussionIdiomsReaderContract.DicOfIdioms.COLUMN_NAME);
-            int meaning = cursor.getColumnIndex(RussionIdiomsReaderContract.DicOfIdioms.COLUMN_MEANING);
-            int history = cursor.getColumnIndex(RussionIdiomsReaderContract.DicOfIdioms.COLUMN_HISTORY);
+            int id = cursor.getColumnIndex(RussionIdiomsReaderContract.DicOfDrWords.COLUMN_ID);
+            int name = cursor.getColumnIndex(RussionIdiomsReaderContract.DicOfDrWords.COLUMN_NAME);
+            int meaning = cursor.getColumnIndex(RussionIdiomsReaderContract.DicOfDrWords.COLUMN_MEANING);
+            int history = cursor.getColumnIndex(RussionIdiomsReaderContract.DicOfDrWords.COLUMN_HISTORY);
 
             do {
-                WordFromIdiomDIc wordFromIdiomDIc = new WordFromIdiomDIc(
+                WordFromDrDic wordFromDrDic = new WordFromDrDic(
                         cursor.getLong(id),
                         cursor.getString(name),
                         cursor.getString(meaning),
                         cursor.getString(history)
                 );
-                wordsFromDic.add(wordFromIdiomDIc);
+                wordsFromDic.add(wordFromDrDic);
             }while (cursor.moveToNext());
         }
         cursor.close();
         sqLiteDatabase.close();
-        Log.i(RussionIdiomsReaderContract.DicOfIdioms.LOG_TAG, "In db:\n" + wordsFromDic.toString());
+        Log.i(RussionIdiomsReaderContract.DicOfDrWords.LOG_TAG, "In db:\n" + wordsFromDic.toString());
         return wordsFromDic;
     }
 
@@ -88,9 +88,9 @@ public class WordFromIdiomDicSQLite implements RussionIdiomsDao {
         SQLiteDatabase readableDatabase = openHelper.getReadableDatabase();
 
         Cursor cursor = readableDatabase.query(
-                RussionIdiomsReaderContract.DicOfIdioms.TABLE_NAME,
+                RussionIdiomsReaderContract.DicOfDrWords.TABLE_NAME,
                 null,
-                RussionIdiomsReaderContract.DicOfIdioms.COLUMN_ID + " ?",
+                RussionIdiomsReaderContract.DicOfDrWords.COLUMN_ID + " ?",
                 new String[] {String.valueOf(id)},
                 null,
                 null,
@@ -101,12 +101,12 @@ public class WordFromIdiomDicSQLite implements RussionIdiomsDao {
         if(cursor.moveToFirst()) {
 
             int columnIndexName = cursor
-                    .getColumnIndex(RussionIdiomsReaderContract.DicOfIdioms.COLUMN_NAME);
+                    .getColumnIndex(RussionIdiomsReaderContract.DicOfDrWords.COLUMN_NAME);
             int columnIndexMeaning = cursor
-                    .getColumnIndex(RussionIdiomsReaderContract.DicOfIdioms.COLUMN_MEANING);
+                    .getColumnIndex(RussionIdiomsReaderContract.DicOfDrWords.COLUMN_MEANING);
             int columnIndexHistory = cursor
-                    .getColumnIndex(RussionIdiomsReaderContract.DicOfIdioms.COLUMN_HISTORY);
-            WordFromIdiomDIc wordFromIdiomDIc = new WordFromIdiomDIc(
+                    .getColumnIndex(RussionIdiomsReaderContract.DicOfDrWords.COLUMN_HISTORY);
+            WordFromDrDic wordFromDrDic = new WordFromDrDic(
                     id,
                     cursor.getString(columnIndexName),
                     cursor.getString(columnIndexMeaning),
@@ -115,8 +115,8 @@ public class WordFromIdiomDicSQLite implements RussionIdiomsDao {
 
             cursor.close();
             readableDatabase.close();
-            Log.i(RussionIdiomsReaderContract.DicOfIdioms.LOG_TAG, "Found student: \n" + wordFromIdiomDIc.toString());
-            return wordFromIdiomDIc;
+            Log.i(RussionIdiomsReaderContract.DicOfDrWords.LOG_TAG, "Found student: \n" + wordFromDrDic.toString());
+            return wordFromDrDic;
         }
         cursor.close();
         readableDatabase.close();
@@ -128,7 +128,7 @@ public class WordFromIdiomDicSQLite implements RussionIdiomsDao {
         SQLiteDatabase writableDatabase = openHelper.getWritableDatabase();
         int k = 0;
         Cursor cursor = writableDatabase.query(
-                RussionIdiomsReaderContract.DicOfIdioms.TABLE_NAME,
+                RussionIdiomsReaderContract.DicOfDrWords.TABLE_NAME,
                 null,
                 RussionIdiomsReaderContract.DicOfIdioms.COLUMN_ID + " = ?",
                 new String[]{String.valueOf(id)},
@@ -137,10 +137,10 @@ public class WordFromIdiomDicSQLite implements RussionIdiomsDao {
                 null
         );
         if (cursor.moveToFirst()) {//установка на первую строчку
-            int colunmnIndexName = cursor.getColumnIndex(RussionIdiomsReaderContract.DicOfIdioms.COLUMN_NAME);
-            int colunmnIndexMeaning = cursor.getColumnIndex(RussionIdiomsReaderContract.DicOfIdioms.COLUMN_MEANING);
+            int colunmnIndexName = cursor.getColumnIndex(RussionIdiomsReaderContract.DicOfDrWords.COLUMN_NAME);
+            int colunmnIndexMeaning = cursor.getColumnIndex(RussionIdiomsReaderContract.DicOfDrWords.COLUMN_MEANING);
             int columnIndexHistory = cursor
-                    .getColumnIndex(RussionIdiomsReaderContract.DicOfIdioms.COLUMN_HISTORY);
+                    .getColumnIndex(RussionIdiomsReaderContract.DicOfDrWords.COLUMN_HISTORY);
             WordFromIdiomDIc wordFromIdiomDIc = new WordFromIdiomDIc(
                     id,
                     cursor.getString(colunmnIndexName),
@@ -159,12 +159,12 @@ public class WordFromIdiomDicSQLite implements RussionIdiomsDao {
                 wordFromIdiomDIc.setHistory(wordFromDic.getHistory());
                 k++;
             }
-                writableDatabase.close();
-                cursor.close();
-                Log.i(RussionIdiomsReaderContract.DicOfIdioms.LOG_TAG, "Update wordFromIdiomDic: + " + wordFromIdiomDIc);
-            }
-            return k;
+            writableDatabase.close();
+            cursor.close();
+            Log.i(RussionIdiomsReaderContract.DicOfDrWords.LOG_TAG, "Update wordFromIdiomDic: + " + wordFromIdiomDIc);
         }
+        return k;
+    }
 
 
 
@@ -172,12 +172,12 @@ public class WordFromIdiomDicSQLite implements RussionIdiomsDao {
     public int deleteById(long id) {
         SQLiteDatabase sqLiteDatabase = openHelper.getWritableDatabase();
         int delete= sqLiteDatabase.delete(
-                RussionIdiomsReaderContract.DicOfIdioms.TABLE_NAME,
-                RussionIdiomsReaderContract.DicOfIdioms.COLUMN_ID + " = ?",
+                RussionIdiomsReaderContract.DicOfDrWords.TABLE_NAME,
+                RussionIdiomsReaderContract.DicOfDrWords.COLUMN_ID + " = ?",
                 new String[] {String.valueOf(id)}
         );
         sqLiteDatabase.close();
-        Log.i(RussionIdiomsReaderContract.DicOfIdioms.LOG_TAG, "Deleted " + delete);
+        Log.i(RussionIdiomsReaderContract.DicOfDrWords.LOG_TAG, "Deleted " + delete);
         return delete;
     }
 }

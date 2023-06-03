@@ -1,26 +1,21 @@
 package com.example.russianidioms.domain;
 
 
-import android.graphics.drawable.Drawable;
-
-import com.example.russianidioms.R;
-
 public class IdiomTest {
     private long id;
-    private String name;
+   // private String name;
     private String theme;
     private String varient1;
     private String varient2;
     private String varient3;
     private String varient4;
-    private Drawable problem;
+    private int problem;
 
 
 
 
-    public IdiomTest(long id, String name, String theme, String varient1, String varient2, String varient3, String varient4, Drawable problem) {
+    public IdiomTest(long id, String theme, String varient1, String varient2, String varient3, String varient4, int problem) {
         this.id = id;
-        this.name=name;
         this.theme = theme;
         this.varient1 = varient1;
         this.varient2 = varient2;
@@ -29,8 +24,7 @@ public class IdiomTest {
         this.problem = problem;
     }
 
-    public IdiomTest(String name, String theme, String varient1, String varient2, String varient3, String varient4, Drawable problem) {
-        this.name=name;
+    public IdiomTest(String theme, String varient1, String varient2, String varient3, String varient4, int problem) {
         this.theme = theme;
         this.varient1 = varient1;
         this.varient2 = varient2;
@@ -39,13 +33,13 @@ public class IdiomTest {
         this.problem = problem;
     }
 
-    public Drawable getProblem() {
+    public int getProblem() {
         return problem;
     }
 
-    public String getName() {
-       return name;
-    }
+    //public String getName() {
+      // return name;
+    //}
 
     public String getTheme() {return theme;}
 
@@ -82,6 +76,31 @@ public class IdiomTest {
                 ", varient4='" + varient4 + '\'' +
                 '}';
     }
+
+    public void setProblem(int problem) {
+        this.problem = problem;
+    }
+
+    public void setTheme(String theme) {
+        this.theme = theme;
+    }
+
+    public void setVarient1(String varient1) {
+        this.varient1 = varient1;
+    }
+
+    public void setVarient2(String varient2) {
+        this.varient2 = varient2;
+    }
+
+    public void setVarient3(String varient3) {
+        this.varient3 = varient3;
+    }
+
+    public void setVarient4(String varient4) {
+        this.varient4 = varient4;
+    }
+
 
 
 }

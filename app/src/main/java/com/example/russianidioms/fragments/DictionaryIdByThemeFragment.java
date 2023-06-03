@@ -28,27 +28,11 @@ public class DictionaryIdByThemeFragment extends Fragment {
         View view = inflater.inflate(R.layout.dictionary, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.dicRecyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-        List<WordFromIdiomDIc> words = List.of(
-                new WordFromIdiomDIc(1,"Авгиевы конюшни", "Очень грязное место"),
-                new WordFromIdiomDIc(2,"Бить баклуши", "Заниматься бесполезным делом"),
-                new WordFromIdiomDIc(3,"Вить верёвки (из кого-то)", "Заставлять что-то делать. Отчитывать"),
-                new WordFromIdiomDIc(4,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(5,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(6,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(7,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(8,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(9,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(10,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(11,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(12,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(13,"Гадкий утёнок", "Некрасивый человек"),
-                new WordFromIdiomDIc(14,"Гадкий утёнок", "Некрасивый человек")
-        );
-        List<ThemeOfIdioms> themes = List.of(new ThemeOfIdioms(1, "суета", words),
-                new ThemeOfIdioms(2, "деньги", words));
+
+
         Log.e("Before adapter", "Construction");
-        DictionaryIdByThemeAdapter adapter = new DictionaryIdByThemeAdapter(themes, getContext(), DictionaryIdByThemeFragment.this);
-        recyclerView.setAdapter(adapter);
+       // DictionaryIdByThemeAdapter adapter = new DictionaryIdByThemeAdapter(themes, getContext(), DictionaryIdByThemeFragment.this);
+       // recyclerView.setAdapter(adapter);
         Log.e("After adapter", "Where?");
         TextView header = view.findViewById(R.id.slHead);
         header.setText(R.string.DicThemeFrasHead);

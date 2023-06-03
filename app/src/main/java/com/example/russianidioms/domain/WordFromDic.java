@@ -4,16 +4,19 @@ public class WordFromDic {
     private long id;
     private String name;
     private String meaning;
+    private String history;
 
-    public WordFromDic(long id, String name, String meaning) {
+    public WordFromDic(long id, String name, String meaning, String history) {
         this.id=id;
         this.name = name;
         this.meaning = meaning;
+        this.history = history;
     }
 
-    public WordFromDic(String name, String meaning) {
+    public WordFromDic(String name, String meaning, String history) {
         this.name = name;
         this.meaning = meaning;
+        this.history = history;
     }
 
     public String getName() {
@@ -43,5 +46,13 @@ public class WordFromDic {
 
     public void setMeaning(String meaning) {
         this.meaning = meaning;
+    }
+
+    public String getHistory() {
+        return history;
+    }
+
+    public void setHistory(String history) {
+        this.history = history;
     }
 }
