@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@id/topGuideline" />
 
     <TextView
-        android:id="@+id/slAlphFrasHead"
+        android:id="@+id/slPractiseFrasHead"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center|start"
@@ -144,7 +144,6 @@
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
         app:layout_constraintHeight_percent="0.05"
-        app:layout_constraintDimensionRatio="10.5:1"
         android:text="@string/Answer1"
         android:textSize="16sp"
         />
@@ -170,7 +169,6 @@
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
         app:layout_constraintHeight_percent="0.05"
-        app:layout_constraintDimensionRatio="10.5:1"
         android:text="@string/Answer2"
         android:textSize="16sp"
         />
@@ -196,7 +194,6 @@
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
         app:layout_constraintHeight_percent="0.05"
-        app:layout_constraintDimensionRatio="10.5:1"
         android:text="@string/Answer3"
         android:textSize="16sp"
         />
@@ -222,7 +219,6 @@
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
         app:layout_constraintHeight_percent="0.05"
-        app:layout_constraintDimensionRatio="10.5:1"
         android:text="@string/Answer3"
         android:textSize="16sp"
         />

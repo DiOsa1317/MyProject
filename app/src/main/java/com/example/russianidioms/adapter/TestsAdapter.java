@@ -1,6 +1,7 @@
 package com.example.russianidioms.adapter;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -48,7 +50,14 @@ public class TestsAdapter extends RecyclerView.Adapter<TestsAdapter.ViewHolder> 
         holder.btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(idiomTestsFragment).navigate(R.id.action_IdiomTestsFragment_to_idiomTestFragment);
+                Bundle bundle = new Bundle();
+                bundle.putString("word_theme", idiomTest.getTheme());
+                bundle.putString("word_varient1", idiomTest.getVarient1());
+                bundle.putString("word_varint2", idiomTest.getVarient2());
+                bundle.putString("word_varint3", idiomTest.getVarient3());
+                bundle.putString("word_varint4", idiomTest.getVarient4());
+                bundle.putInt("word_problem", idiomTest.getProblem());
+                Navigation.findNavController(v).navigate(R.id.action_IdiomTestsFragment_to_idiomTestFragment, bundle);
             }
         });
     }

@@ -184,7 +184,8 @@
         <argument
             android:name="id"
             app:argType="long"
-            app:nullable="false" />
+            app:nullable="false"
+            android:defaultValue="0L"/>
     </fragment>
 
     <fragment

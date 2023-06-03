@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,6 +19,15 @@ public class AlphForDrFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.vocabulary_entry, container, false);
         AppCompatButton btn_backToDictionary = view.findViewById(R.id.backFromThisIdiom);
+
+        TextView name = view.findViewById(R.id.slAlphFrasHead);
+        TextView meaning = view.findViewById(R.id.MeaningOfThisIdiom);
+        TextView history = view.findViewById(R.id.ExamplesOfThis);
+
+        name.setText(getArguments().getString("word_name"));
+        meaning.setText(getArguments().getString("word_meaning"));
+        history.setText(getArguments().getString("word_history"));
+
         btn_backToDictionary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

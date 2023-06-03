@@ -16,12 +16,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.russianidioms.R;
 import com.example.russianidioms.adapter.DictionaryDrByThemeAdapter;
 import com.example.russianidioms.adapter.DictionaryIdByAlphAdapter;
 import com.example.russianidioms.dao.impl.WordFromIdiomDicSQLite;
-import com.example.russianidioms.databinding.DictionaryBinding;
 import com.example.russianidioms.domain.WordFromDic;
 
 import java.util.ArrayList;
@@ -29,6 +29,8 @@ import java.util.List;
 
 
 public class DictionaryIdiomByAlphFragment extends Fragment {
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

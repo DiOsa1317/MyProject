@@ -2,12 +2,15 @@ package com.example.russianidioms.adapter;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -42,10 +45,15 @@ public class DictionaryIdByAlphAdapter extends RecyclerView.Adapter<DictionaryId
     public void onBindViewHolder(@NonNull DictionaryIdByAlphAdapter.ViewHolder holder, int position) { //all actions here
         WordFromDic wordFromDic = words.get(position);
         holder.nameOfWord.setText(wordFromDic.getName());
+
         holder.nameOfWord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(dictionaryIdiomByAlphFragment).navigate(R.id.action_dictionaryIdiomByAlphFragment_to_alphForIdiomFragment);
+                Bundle bundle = new Bundle();
+                bundle.putString("word_name", wordFromDic.getName());
+                bundle.putString("word_meaning", wordFromDic.getMeaning());
+                bundle.putString("word_history", wordFromDic.getHistory());
+                Navigation.findNavController(v).navigate(R.id.action_dictionaryIdiomByAlphFragment_to_alphForIdiomFragment, bundle);
             }
         });
 
